@@ -1,0 +1,32 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the app takes the full height of the viewport */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout styling */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Ensures the app has a flexible layout */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
