@@ -42,9 +42,9 @@
       "id": 101,
       "name": "Laptop",
       "description": "A powerful gaming laptop",
-      "manufacturer": "Tech Corp",
-      "price": 12000,
-      "quantity": 5
+      "manufacturer": "Lenovo",
+      "price": 58000,
+      "quantity": 4
     },
     {
       "id": 102,

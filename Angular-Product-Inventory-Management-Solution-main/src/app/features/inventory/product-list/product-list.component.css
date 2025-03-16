@@ -50,12 +50,22 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* View button in green */
+button:first-of-type {
+    background-color: #28a745;
+    
+}
+
+button:first-of-type:hover {
+    background-color: #218838;
+}
+
 /* Delete button in red */
-button.delete-btn {
+button:last-of-type {
     background-color: #e74c3c;
 }
 
-button.delete-btn:hover {
+button:last-of-type:hover {
     background-color: #c0392b;
 }
 
