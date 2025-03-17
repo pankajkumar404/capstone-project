@@ -1,0 +1,55 @@
+/* Navigation bar container */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+    gap: 15px; /* Adds spacing between elements */
+}
+
+/* Style navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #1a252f;
+}
+
+/* Style the logout button */
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start; /* Aligns items to the left on mobile too */
+        padding: 10px;
+    }
+
+    nav a, button {
+        width: auto;
+        text-align: left;
+    }
+}

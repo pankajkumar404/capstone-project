@@ -1,0 +1,31 @@
+/* Center the search bar */
+div {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+/* Style the input field */
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Highlight input field on focus */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input {
+        width: 90%;
+    }
+}

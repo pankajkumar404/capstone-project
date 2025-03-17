@@ -1,0 +1,103 @@
+/* Style the heading */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Style the search filter component */
+app-search-filter {
+    display: block;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+/* Style the product list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Style each product item */
+li {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* View button in green */
+button:first-of-type {
+    background-color: #28a745;
+    
+}
+
+button:first-of-type:hover {
+    background-color: #218838;
+}
+
+/* Delete button in red */
+button:last-of-type {
+    background-color: #e74c3c;
+}
+
+button:last-of-type:hover {
+    background-color: #c0392b;
+}
+
+/* Add Product button */
+button[routerLink="/inventory/add-product"] {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    border-radius: 5px;
+}
+
+button[routerLink="/inventory/add-product"]:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    ul {
+        max-width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,51 @@
+<div class="register-container">
+<h2>Register</h2>
+<form (ngSubmit)="onRegister(registerForm)" #registerForm="ngForm">
+    <div>
+        <label>Email:</label>
+        <input type="email" name="email" ngModel required email #email="ngModel" />
+        <div *ngIf="email.invalid && email.touched">
+            <small *ngIf="email.errors?.['required']">Email is required.</small>
+            <small *ngIf="email.errors?.['email']">Please enter a valid email.</small>
+        </div>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" name="password" ngModel required minlength="6" #password="ngModel" />
+        <div *ngIf="password.invalid && password.touched">
+            <small *ngIf="password.errors?.['required']">Password is required.</small>
+            <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long.</small>
+        </div>
+    </div>
+    <div>
+        <label>First Name:</label>
+        <input type="text" name="firstName" ngModel required #firstName="ngModel" />
+        <div *ngIf="firstName.invalid && firstName.touched">
+            <small *ngIf="firstName.errors?.['required']">First name is required.</small>
+        </div>
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" ngModel required #lastName="ngModel" />
+        <div *ngIf="lastName.invalid && lastName.touched">
+            <small *ngIf="lastName.errors?.['required']">Last name is required.</small>
+        </div>
+    </div>
+    <div>
+        <label>Location:</label>
+        <input type="text" name="location" ngModel required #location="ngModel" />
+        <div *ngIf="location.invalid && location.touched">
+            <small *ngIf="location.errors?.['required']">Location is required.</small>
+        </div>
+    </div>
+    <div>
+        <label>Mobile Number:</label>
+        <input type="text" name="mobileNumber" ngModel required pattern="^[0-9]{10}$" #mobileNumber="ngModel" />
+        <div *ngIf="mobileNumber.invalid && mobileNumber.touched">
+            <small *ngIf="mobileNumber.errors?.['required']">Mobile number is required.</small>
+            <small *ngIf="mobileNumber.errors?.['pattern']">Enter a valid 10-digit mobile number.</small>
+        </div>
+    </div>
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+</form>
+</div>
